@@ -2,32 +2,29 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <title>auxclick</title>
+    <title>Web Input Automation</title>
     <link rel="stylesheet" type="text/css" href="https://w3c.github.io/uievents/spec-WD.css">
     <script src='https://www.w3.org/Tools/respec/respec-w3c-common.js' class='remove'></script>
     <script class='remove'>
       var respecConfig = {
         specStatus: "CG-DRAFT",
-        edDraftURI: "http://wicg.github.io/auxclick/",
+        edDraftURI: "https://navidz.github.io/web-input-automation/",
+        shortName: "web-input-automation",
         editors: [{
           name:        "Navid Zolghadr",
           url:         "https://github.com/NavidZ",
           company:     "Google",
           companyURL:  "https://www.google.com/"
         }],
-        shortName: "auxclick",
         otherLinks: [{
           key: 'Participation',
           data: [
               {
                 value: 'GitHub repository',
-                href: 'https://github.com/NavidZ/auxclick/'
+                href: 'https://github.com/NavidZ/web-input-automation/'
               } ,{
                 value: 'File a bug / view open issues',
-                href: 'https://github.com/NavidZ/auxclick/issues'
-              }, {
-                value: 'Feedback / discussion in the WICG',
-                href: 'https://discourse.wicg.io/t/new-event-for-non-primary-button-click/1527'
+                href: 'https://github.com/NavidZ/web-input-automation/issues'
               }
             ]
           }],
@@ -37,7 +34,7 @@
   <body>
     <section id='abstract'>
       <p>
-        The new input event type introduced in this document provides web developers a way to listen to the "click" behavior of non-primary buttons, and potentially cancel their effect (eg. opening a new tab when middle clicking on a link). This new input type is needed because the <a href="https://w3c.github.io/uievents/#event-type-click">click</a> event is restricted to primary button only.
+        The new interface introduced in this document provides web developers a way to generate synthetic input events from different devices and interact with their app as if the user is interacting with it. This API make testing a web page that needs user input possible across multiple browsers. This work extends <a href="https://w3c.github.io/webdriver/webdriver-spec.html">WebDriver spec</a> by introducing some Javascript APIs to accomplish the task of generating synthetic input.
       </p>
     </section>
 
