@@ -69,6 +69,40 @@ interface InputDriver {
       <h2>Examples</h2>
       <p>The following are examples that demonstrate how the new interface in this specification might
       be used</p>
+<pre id="example_1" class="example" title="Feature detection and sending inputs">
+<code>
+if (window.InputDriver) {
+    var driver = new InputDriver();
+    var result = driver.sendpointerActions([
+      {
+        "source": "mouse",
+        "actions": [
+          { "name": "pointerDown", "x": 5, "y": 5 },
+          { "name": "pointerMove", "x": 5, "y": 8 },
+          { "name": "pause"},
+          { "name": "pointerUp" }
+        ]
+      },
+      {
+        "source": "touch",
+        "actions": [
+          { "name": "pause" },
+          { "name": "pause" },
+          { "name": "pointerDown", "x": 9, "y": 9 },
+          { "name": "pointerMove", "x": 9, "y": 12 },
+          { "name": "pointerUp" }
+        ]
+      }
+    ]);
+    result.then(function() {
+      // Sending the input was successful.
+    });
+} else {
+    // Input automation is not supported on your browser. You may need
+    // to enable a flag to enable this API. 
+}
+</code>
+</pre>
     </section>
   </body>
 </html>
