@@ -1,5 +1,3 @@
-# auxclick
-This repository contains a [proposed specification](https://wicg.github.io/auxclick/) for a new MouseEvent called auxclick for non-primary buttons as the counterpart of click event which is restricted to the primary button
+# Web Input Automation 
+This repository contains a [proposed specification](https://navidz.github.io/web-input-automation/) for generating synthetic input events on the web. This API allowes developers to automate their tests that need user input.
 
-## References
-* [WICG Discourse thread](https://discourse.wicg.io/t/new-event-for-non-primary-button-click/1527)
